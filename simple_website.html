@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Personal Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .nav a:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .section h2 {
+            color: #4a4a4a;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            position: relative;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .skill-card {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .project-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-card h3 {
+            color: #4a4a4a;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .contact-item {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Your Name</h1>
+            <p class="subtitle">Web Developer & Designer</p>
+            <nav class="nav">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>Hello! I'm a passionate web developer with a love for creating beautiful and functional websites. I enjoy working with modern technologies and am always eager to learn new skills. When I'm not coding, you can find me exploring new places, reading tech blogs, or working on personal projects.</p>
+            <p style="margin-top: 1rem;">I believe in writing clean, efficient code and creating user experiences that make a difference. My goal is to build websites that not only look great but also perform exceptionally well.</p>
+        </section>
+
+        <section id="skills" class="section">
+            <h2>My Skills</h2>
+            <div class="skills">
+                <div class="skill-card">
+                    <h3>HTML5 & CSS3</h3>
+                    <p>Modern markup and styling</p>
+                </div>
+                <div class="skill-card">
+                    <h3>JavaScript</h3>
+                    <p>Interactive web experiences</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Responsive Design</h3>
+                    <p>Mobile-first approach</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Git & GitHub</h3>
+                    <p>Version control & collaboration</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>My Projects</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <h3>Personal Portfolio</h3>
+                    <p>A responsive portfolio website showcasing my skills and projects. Built with HTML, CSS, and JavaScript with a focus on modern design principles.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Todo App</h3>
+                    <p>A simple yet effective todo application with local storage functionality. Features include adding, editing, and deleting tasks with a clean interface.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Weather Dashboard</h3>
+                    <p>A weather application that displays current weather conditions and forecasts. Integrates with weather APIs to provide real-time data.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Get In Touch</h2>
+            <p style="text-align: center; margin-bottom: 1.5rem;">I'd love to hear from you! Whether you have a project in mind or just want to connect.</p>
+            <div class="contact-info">
+                <a href="mailto:your.email@example.com" class="contact-item">Email Me</a>
+                <a href="https://github.com/yourusername" class="contact-item" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/yourprofile" class="contact-item" target="_blank">LinkedIn</a>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.transform = 'translateY(-10px)';
+                header.style.opacity = '0.95';
+            } else {
+                header.style.transform = 'translateY(0)';
+                header.style.opacity = '1';
+            }
+        });
+    </script>
+</body>
+</html>
